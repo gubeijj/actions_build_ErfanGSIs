@@ -51,11 +51,13 @@ jobs:
        
        - name: Zip GSI  
          run: |
-                mkdir final
+              cd $GITHUB_WORKSPACE/ErfanGSIs/output
+              mkdir final
               zip -r final/GSI.zip ./*
        
-       - name: Upload GSI to BitSend
+       - name: Upload GSI to WeTransfer
          run: |
+              cd $GITHUB_WORKSPACE/ErfanGSIs/output
               curl -sL https://git.io/file-transfer | sh
               ./transfer gof ./final/GSI.zip
 
