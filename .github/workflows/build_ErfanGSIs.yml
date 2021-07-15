@@ -1,4 +1,4 @@
-name: build_ErfanGSIs
+name: sgsi-build-tool
 
 on:
 #  release:
